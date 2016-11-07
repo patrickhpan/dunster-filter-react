@@ -15,7 +15,7 @@ body {
         #Header,
         #Footer {
             width: 100%;
-            flex: 0;
+            flex-grow: 0;
             padding: $header-padding;
             color: $white;
             background-color: $blue;
@@ -30,6 +30,11 @@ body {
         #Footer {
             @include flex($flex-direction: column);
             min-height: 60px;
+            > * {
+                font-family: 'Helvetica Neue', 'Helvetica'!important;
+                font-weight: 300;
+                margin: 3px;
+            }
         }
         #Body {
             @include flex($flex-direction: column);
