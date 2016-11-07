@@ -1,9 +1,22 @@
 $white: #ffffff;
-$off-white: #eeeeee;
+$off-white: #f1f1f1;
+$blue: #0057b8;
+$red: #e4002b;
 
+@font-face {
+    font-family: 'Unity';
+    src: url('../fonts/UnityText-Bold.woff');
+    font-weight: bold;
+}
 
-$font1: 'Helvetica', 
-    sans-serif;
+@font-face {
+    font-family: 'Unity';
+    src: url('../fonts/UnityText-Roman.woff');
+    font-weight: normal;
+}
+
+$font1: 'Unity',
+    serif;
 
 * {
     box-sizing: border-box;
@@ -15,6 +28,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit!important;
+    /*&:not(.underline) {*/
+        text-decoration: none!important;
+    /*}*/
 }
 

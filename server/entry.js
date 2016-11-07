@@ -12,10 +12,10 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 const auth = require('./routes/auth');
-const picture = require('./routes/picture');
+const fb = require('./routes/fb');
 
 let authRoute = auth(passport);
 app.use('/auth', authRoute)
-app.use('/picture', picture);
+app.use('/fb', fb);
 
 module.exports = app;

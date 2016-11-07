@@ -1,11 +1,70 @@
+@import './mixins.scss';
 @import './constants.scss';
-
+@import './variables.scss';
 body {
     background-color: $off-white;
 }
+
 #app-root {
-    div#App {
-        background-color: $white;
-        padding: 100px;
+    background-color: $white;
+    position: absolute;
+    @include hundop;
+    #App {
+        @include hundop;
+        @include flex($flex-direction: column);
+        #Header,
+        #Footer {
+            width: 100%;
+            @include flex();
+            flex: 0;
+            padding: $header-padding;
+            color: $white;
+            background-color: $blue;
+            h1 {
+                @include flex($align-items: flex-end);
+            }
+        }
+        #Header {
+            min-height: 100px;
+        }
+        #Footer {
+            min-height: 60px;
+        }
+        #Body {
+            @include flex($flex-direction: column);
+            flex: 1;
+            padding: $body-padding;
+            .AuthButton {
+                cursor: pointer;
+                margin-top: 15px;
+                color: $auth-button-color;
+                background-color: $auth-button-bg;
+                padding: $auth-button-padding;
+                border: none;
+                font-weight: $auth-button-weight;
+                font-size: $auth-button-size;
+            }
+            .SignOutButton {
+                cursor: pointer;
+                margin-top: 15px;
+                color: $auth-button-color;
+                background-color: $signout-button-bg;
+                padding: $auth-button-padding;
+                border: none;
+                font-weight: $auth-button-weight;
+                font-size: $auth-button-size;
+            }
+            canvas {
+                width: 70%;
+            }
+        }
     }
+}
+
+.sample {
+    margin: 50px;
+    width: 300px;
+    height: 300px;
+    max-height: 30vh;
+    max-width: 30vh;
 }

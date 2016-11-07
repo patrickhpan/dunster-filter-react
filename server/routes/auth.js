@@ -12,8 +12,13 @@ function getRouter(passport) {
         }),
         function (req, res) {
             console.log(req.session)
-            res.redirect('/picture/getImage');
+            res.redirect('/#');
         });
+    
+    router.get('/clear', (req, res) => {
+        req.logOut();
+        res.redirect('/')
+    });
 
     return router;
 }
