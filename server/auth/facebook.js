@@ -1,4 +1,5 @@
 const FacebookStrategy = require('passport-facebook').Strategy;
+const getPFP = require('../apis/getPFP');
 
 function facebook(passport) {
     passport.use(new FacebookStrategy({
@@ -6,13 +7,14 @@ function facebook(passport) {
             clientSecret: process.env.FB_APP_SECRET,
             callbackURL: "http://localhost:9000/auth/fb/callback"
         },
-        function (...args) {
-            console.log(args)
-            // User.findOrCreate({
-            //     facebookId: profile.id
-            // }, function (err, user) {
-            //     return cb(err, user);
-            // });
+        function (accessToken, refreshToken, profile, cb) {
+            return cb(null, profile)
+
+            // cb(JSON.stringify({
+            //     accessToken,
+            //     refreshToken,
+            //     profile
+            // }))
         }
     ));
     return passport;
