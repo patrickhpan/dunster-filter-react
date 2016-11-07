@@ -2,7 +2,7 @@ import React from 'react';
 
 class Save extends React.Component {
     render() {
-        return <div>
+        return <div className="above">
             Right-click, save as, and upload to Facebook! 
         </div>
     }

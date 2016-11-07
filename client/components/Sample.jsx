@@ -1,5 +1,5 @@
 import React from 'react';
-import me from '../img/patrick.jpg'
+import me from '../img/sample.jpg'
 
 class Sample extends React.Component {
     render() {
