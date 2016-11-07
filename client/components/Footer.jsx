@@ -8,7 +8,7 @@ class Footer extends React.Component {
         return <div id="Footer">
             <a className="underline" href="http://patrickpan.com"> Made with 😍  by Patrick Pan.</a>
             <a className="underline" href="http://github.com/patrickhpan/im-with-her">Check out the source here.</a>
-            <div>Not affiliated with the official Hillary campaign.</div>
+            <span>Not affiliated with the official Hillary campaign.</span>
         </div>            
     }
 }
