@@ -7,7 +7,7 @@ import About from './components/About';
 
 let routes = <Route path="/" component={App}>
     <IndexRoute component={HelloWorld} />
-    <Route path="/about" component={About} />
+    <Route path="/picture" component={About} />
 </Route>
 
 export default routes;

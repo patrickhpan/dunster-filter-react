@@ -8,6 +8,8 @@ function facebook(passport) {
             callbackURL: "http://localhost:9000/auth/fb/callback"
         },
         function (accessToken, refreshToken, profile, cb) {
+            console.log("asdf")
+            profile.token = accessToken;
             return cb(null, profile)
 
             // cb(JSON.stringify({
