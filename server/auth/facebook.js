@@ -5,7 +5,7 @@ function facebook(passport) {
     passport.use(new FacebookStrategy({
             clientID: process.env.FB_APP_ID,
             clientSecret: process.env.FB_APP_SECRET,
-            callbackURL: "http://imwithher.patrickpan.com/auth/fb/callback"
+            callbackURL: process.env.FB_APP_CALLBACK
         },
         function (accessToken, refreshToken, profile, cb) {
             profile.token = accessToken;

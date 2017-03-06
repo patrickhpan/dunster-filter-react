@@ -1,8 +1,18 @@
 {
     "Landing": {
-        "text": "Add a Hillary 2016 filter to your existing Facebook profile picture!"
+        "text": "Add a Dunster House filter to your existing Facebook profile picture!"
     },
     "Header": {
-        "left": "I'm With Her"
+        "left": "Dunster House"
+    },
+    "Footer": {
+        "creds": {
+            "text": "Made with 😍  by Patrick Pan.",
+            "link": "http://patrickpan.com"
+        },
+        "source": {
+            "text": "Check out the source here.",
+            "link": "http://github.com/patrickhpan/dunster-filter"
+        }
     }
 }

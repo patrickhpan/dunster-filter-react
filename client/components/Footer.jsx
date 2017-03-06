@@ -5,10 +5,10 @@ import Strings from '../json/strings.json';
  
 class Footer extends React.Component {
     render() {
+        console.log(Strings.Footer)
         return <div id="Footer">
-            <a className="underline" href="http://patrickpan.com"> Made with 😍  by Patrick Pan.</a>
-            <a className="underline" href="http://github.com/patrickhpan/im-with-her">Check out the source here.</a>
-            <span>Not affiliated with the official Hillary campaign.</span>
+            <a className="underline" href={Strings.Footer.creds.link}>{Strings.Footer.creds.text}</a>
+            <a className="underline" href={Strings.Footer.source.link}>{Strings.Footer.source.text}</a>
         </div>            
     }
 }
