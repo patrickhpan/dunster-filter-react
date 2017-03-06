@@ -1,22 +1,12 @@
 $white: #ffffff;
 $off-white: #f1f1f1;
-$blue: #0057b8;
-$red: #e4002b;
+$red: #8d1829;
+$gold: #ffb400;
 
-@font-face {
-    font-family: 'Unity';
-    src: url('../fonts/UnityText-Bold.woff');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'Unity';
-    src: url('../fonts/UnityText-Roman.woff');
-    font-weight: normal;
-}
-
-$font1: 'Unity',
-    serif;
+$font1: 'Helvetica Neue',
+    'Helvetica',
+    'Arial',
+    sans-serif;
 
 * {
     box-sizing: border-box;

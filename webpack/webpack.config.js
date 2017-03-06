@@ -41,10 +41,7 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new CopyWebpackPlugin([{
 			from: path.join(SETTINGS.SRCDIR, 'index.html')
-		}]),
-		new webpack.DefinePlugin({
-			'process.env': JSON.stringify(dotenv.parse(envFile))
-		})
+		}])
 	],
 	node: {
 		fs: 'empty',

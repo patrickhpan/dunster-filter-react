@@ -16,6 +16,7 @@ class Editor extends React.Component {
     }
     loadImage(url) {
         let img = new Image();
+        img.setAttribute('crossOrigin', 'anonymous');
         img.onload = () => {
         
             let dims = {
@@ -25,6 +26,7 @@ class Editor extends React.Component {
             this.drawOnCanvas(img, dims);
         }
         img.src = url;
+
     }
     drawOnCanvas(img, dims) {
         console.log(dims);
@@ -59,10 +61,15 @@ class Editor extends React.Component {
     render() {
         let registerCanvas = canvas => { this.canvas = canvas };
 
+        let onclick = (event) => {
+            var image = event.target.toDataURL("image/png")  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+            window.location.href=image;
+        }        
         return <canvas
                 width={CANVAS_SIZE}
                 height={CANVAS_SIZE}
                 ref={registerCanvas}
+                onClick={onclick}
             />
     }    
 }

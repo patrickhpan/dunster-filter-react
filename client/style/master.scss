@@ -17,7 +17,7 @@ body {
             width: 100%;
             flex-grow: 0;
             color: $white;
-            background-color: $blue;
+            background-color: $red;
             h1 {
                 @include flex($align-items: flex-end);
             }
@@ -98,3 +98,8 @@ body {
     }
 }
 
+
+
+canvas {
+    cursor: pointer;
+}
